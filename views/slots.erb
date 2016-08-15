@@ -1,6 +1,6 @@
 <h1> Welcome to $1 Slots! </h1>
-<!-- <%@balance = 100 %> -->
-<h3> Your balance is $<%=@wallet%> </h3>
+<%@balance = @player.wallet.amount %>
+<h3> Your balance is $<%=@balance%> </h3>
 
 <form action="/slots/play">
     <input type="submit" value="SPIN!!!" />

@@ -5,7 +5,7 @@ class HighLow
 		@mult = 1.1
     @name = 'High Low'
     @min = 1
-    @wallet = 500 #game_money
+    @game_money = $player.wallet.amount #game_money
     @game_bet = 0
 	end
 
