@@ -35,3 +35,25 @@ get '/slots/play' do
 	erb :play_slots
 end
 
+get '/high_low' do
+	@High_low = HighLow.new
+	erb :high_low
+end
+
+get '/high' do
+  $high_low_number
+	@user_high_low = HighLow.new
+	erb :high
+end
+
+get '/low' do
+	$high_low_number
+	@user_high_low = HighLow.new
+	erb :low
+end
+
+
+get '/win' do
+	@High_low = HighLow.new
+	erb :win
+end
