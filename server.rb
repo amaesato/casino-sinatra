@@ -27,13 +27,15 @@ post '/player' do
 end
 
 get '/slots' do
+	slots = Slots.new(@player)
 	erb :slots
+
 end
 
 get '/slots/play' do
-	@wallet = 1010
 	erb :play_slots
 end
+
 
 get '/high_low' do
 	@High_low = HighLow.new
