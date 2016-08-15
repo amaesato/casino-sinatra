@@ -1,0 +1,16 @@
+
+<div class="container">
+  <form>
+    <input type="text" placeholder="Name" name="name" />
+    <input type="number" placeholder="Money amount" name="amount" />
+    <input type="submit" />
+  </form>
+</div>
+
+<div class="container">
+<% if @name == nil && @amount == nil %>
+<h3>Create a Player Profile</h3>
+<% else %>
+<h3>You have $<%= @amount %> to play with. You are ready to play <%= @name %>.</h3>
+<% end %>
+</div>
