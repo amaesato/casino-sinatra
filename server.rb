@@ -1,6 +1,7 @@
 require 'sinatra'
 require 'pry'
 require_relative 'lib/high_low'
+require_relative 'lib/slots'
 
 get '/' do
 	erb :index
@@ -24,3 +25,13 @@ end
 post '/player' do
 	@player = Player.new(@name, @amount)
 end
+
+get '/slots' do
+	erb :slots
+end
+
+get '/slots/play' do
+	@wallet = 1010
+	erb :play_slots
+end
+
