@@ -1,0 +1,24 @@
+<% @slot_spin = ['cherry', 'bar', "7"] %>
+<% spin_result = Array.new %>
+
+<%3.times do
+  spin_result << @slot_spin.sample
+end%>
+
+<p><%= spin_result[0] %><%= spin_result[1] %><%= spin_result[2] %></p>
+
+<% if spin_result.first == spin_result[1] && spin_result[1] == spin_result.last%>
+    <h3> YOU WIN!!!!!</h3>
+    <% @wallet += 10 %>
+<% else %>
+    <h3> You lose </h3>
+    <% @wallet -= 1 %>
+<% end %>
+
+<h6> Your new balance is <%= @wallet %>
+
+  <!-- STORE WALLET INTO PLAYER -->
+
+  <form action="/slots/play">
+      <input type="submit" value="Spin Again?" />
+  </form>
