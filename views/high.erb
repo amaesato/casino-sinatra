@@ -1,0 +1,15 @@
+<% @high_low_number2 = @user_high_low.init_rand_num %>
+<h4>Computer number is <%= $high_low_number %> </h4>
+<h4> Your number is <%= @high_low_number2 %> </h4>
+
+
+
+<% if $high_low_number < @high_low_number2 %>
+  <h3>You Win!</h3>
+  <button type='button'><a href="/win"/>Continue</a></button>
+<% else %>
+<h3>You Lose!</h3>
+<h3>Play Again?</h3>
+  <button type='button'><a href='/high_low'>Yes</a></button>
+  <button type='button'><a href='/'>No</a></button>
+<% end %>
