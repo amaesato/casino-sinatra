@@ -1,11 +1,19 @@
-require_relative 'wallet'
+require_relative 'player_info'
+require 'pry'
 
 class Player
-	attr_accessor :name, :wallet#, :karma
+	attr_accessor :player
 
-	def initialize(name, amount)
-		@wallet = Wallet.new(amount)
-		@name = name
-    # @karma = rand(100)
+	def initialize
+		@player = nil
 	end
+
+	def player_info(name, wallet)
+		@player = Player_info.new(name, wallet)
+	end
+
+	def welcome_new_player
+		"Welcome #{@player.name}, you have $#{@player.wallet} in your wallet."
+	end
+
 end
