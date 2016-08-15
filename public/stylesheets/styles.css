@@ -7,19 +7,17 @@ h1, h2, h3, h4, ul, li, p, form {
 }
 
 body {
-  background-color: #444;
-  color: #fff;
   font: 300 16px/22px "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 header {
   margin-top: 20px;
 }
 a {
-  color: #a9b2b9;
+  color: #000;
   text-decoration: none;
 }
 a:hover {
-  color: #fff;
+  color: #a9b2b9;
 }
 ul {
   list-style: none;
@@ -76,15 +74,15 @@ form {
 	margin-right: 0;
 }
 .btn {
-  background-color: red;
+  background-color: #BE0514;
   border: 1px solid #000;
   border-radius: 5px;
-  color: black;
+  color: white;
   cursor: pointer;
   display: inline-block;
   font-weight: 700;
   letter-spacing: .5px;
-  margin: 10px;
+  margin: 20px;
   text-transform: uppercase;
 	padding: 10px 30px;
 }
