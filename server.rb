@@ -23,18 +23,17 @@ get '/player' do
 	erb :player
 end
 
-post '/games' do
-	$player = Player.new(@name, @amount)
-	erb :games
+post '/player' do
+	# $player = Player.new(@name, @amount)
 end
 
 get '/slots' do
-	slots = Slots.new($player)
 	erb :slots
 
 end
 
 get '/slots/play' do
+	@slots = Slots.new
 	erb :play_slots
 end
 

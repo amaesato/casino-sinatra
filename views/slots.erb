@@ -1,7 +1,14 @@
+<div class="center_slots">
+<br/>
+<br/>
+<br/>
+<br/>
 <h1> Welcome to $1 Slots! </h1>
-<%@balance = @player.wallet.amount %>
-<h3> Your balance is $<%=@balance%> </h3>
+<br/>
+<br/>
+<br/>
+<h3> Your balance is $<%=$player.wallet.amount%> </h3>
 
-<form action="/slots/play">
-    <input type="submit" value="SPIN!!!" />
-</form>
+<a class="btn" href="/slots/play">SPIN NOW!</a>
+
+</div>

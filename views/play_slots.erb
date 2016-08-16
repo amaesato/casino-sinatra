@@ -1,24 +1,35 @@
-<% @slot_spin = ['cherry', 'bar', "7"] %>
+<div class="center_slots">
+<br/>
+<br/>
+<br/>
+<br/>
+<% @slot_spin = ['CHERRY', 'BAR', "7"] %>
 <% spin_result = Array.new %>
+<% @wallet= $player.wallet.amount.to_i %>
+
 
 <%3.times do
   spin_result << @slot_spin.sample
 end%>
 
-<p><%= spin_result[0] %><%= spin_result[1] %><%= spin_result[2] %></p>
+<p><%= spin_result[0] %>&nbsp;<%= spin_result[1] %>&nbsp;<%= spin_result[2] %></p>
+
+<br/>
+<br/>
+<br/>
 
 <% if spin_result.first == spin_result[1] && spin_result[1] == spin_result.last%>
-    <h3> YOU WIN!!!!!</h3>
+    <h3 class="win"> YOU WIN!!!!!</h3>
     <% @wallet += 10 %>
+
 <% else %>
-    <h3> You lose </h3>
+    <h3 class="lose"> You Lose </h3>
     <% @wallet -= 1 %>
+
 <% end %>
 
-<h6> Your new balance is <%= @wallet %>
+<h6> Your new balance is <%= @wallet %></h6>
+<% $player.wallet.amount = @wallet %>
 
-  <!-- STORE WALLET INTO PLAYER -->
-
-  <form action="/slots/play">
-      <input type="submit" value="Spin Again?" />
-  </form>
+<a class="btn" href="/slots/play">SPIN AGAIN?</a>
+</div>

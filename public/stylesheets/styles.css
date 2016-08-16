@@ -90,3 +90,18 @@ form {
   padding-top: 20px;
   text-align: center;
 }
+
+.center_slots {
+  text-align: center;
+  font-size: 24
+}
+
+.win {
+  font-size: 40;
+  color: #00ff00;
+}
+
+.lose {
+  font-size: 40;
+  color: red;
+}

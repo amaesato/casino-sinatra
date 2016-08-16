@@ -1,6 +1,6 @@
 
 <div class="container">
-  <form method="post" action="/games">
+  <form>
     <input type="text" placeholder="Name" name="name" required />
     <input type="number" placeholder="Money amount" name="amount" required />
     <input type="submit" />
@@ -12,5 +12,6 @@
 <h3>Create a Player Profile</h3>
 <% else %>
 <h3>You have $<%= @amount %> to play with. You are ready to play <%= @name %>.</h3>
+<% $player = Player.new(@name, @amount) %>
 <% end %>
 </div>
